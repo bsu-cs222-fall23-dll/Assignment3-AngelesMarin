@@ -1,17 +1,14 @@
 package edu.bsu.cs222;
+
 public class SillyMethods {
-    public boolean didGuess42(int year) {
-        return true;
+    public boolean didGuess42(int guess) {
+        return guess == 42;
     }
 
-    public String countTo(int num) {
-        StringBuilder builder = new StringBuilder();
-        for (int number = 0; number <= num; number++) {
-            builder.append(number).append(" ");
-        }
-        String result = builder.toString().trim();
-        return result;
-
-
+    public String countTo(int number) {
+        StringBuilder builder = new StringBuilder("0");
+        for (int i = 1; i <= number; i++)
+            builder.append(" ").append(i);
+        return builder.toString();
     }
 }
